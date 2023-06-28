@@ -1,0 +1,8 @@
+<div [formGroup]="form._parent">
+  <ng-container [formArrayName]="formGroupName">
+    <ng-container *ngFor="let lessonForm of form.controls; let i = index">
+      <button (click)="add()"></button>
+      <input [formControlName]="i" type="text" />
+    </ng-container>
+  </ng-container>
+</div>
